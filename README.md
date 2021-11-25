@@ -3,7 +3,7 @@
 ## Install
 - `heic2jpg` to convert HEIC files to JPG preserving exif 
 
-``` go get github.com/lyytaw/goheif/...```
+``` go get github.com/lyytawgrep /goheif/...```
 
 - Tested
   - Mac OS X (High Sierra) 
