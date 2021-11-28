@@ -4,9 +4,13 @@
 #else
 #define HAVE_POSIX_MEMALIGN 1
 #endif
-// #define HAVE_SSE4_1 1
-#define HAVE_ARM
-// #define HAVE_NEON
+
+#if defined(__arm64__) || defined(__aarch64__)
+#define HAVE_ARM 1
+#else
+#define HAVE_SSE4_1 1
+#endif
+// #define HAVE_NEON 1
 
 #include "alloc_pool.cc"
 #include "bitstream.cc"
@@ -52,5 +56,3 @@
 #ifdef HAVE_ARM
 #include "arm/arm.cc"
 #endif
-
-
